@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/mainPageFragment">
+
+    <fragment
+        android:id="@+id/mainPageFragment"
+        android:name="com.exercise.tbchomeworkdseventeen.ui.mainpage.MainPageFragment"
+        android:label="fragment_main_page"
+        tools:layout="@layout/fragment_main_page" >
+        <action
+            android:id="@+id/action_mainPageFragment_to_registerPageFragment"
+            app:destination="@id/registerPageFragment" />
+        <action
+            android:id="@+id/action_mainPageFragment_to_homePageFragment"
+            app:destination="@id/homePageFragment"
+            app:popUpTo="@id/mainPageFragment"
+            app:popUpToInclusive="true"/>
+    </fragment>
+    <fragment
+        android:id="@+id/registerPageFragment"
+        android:name="com.exercise.tbchomeworkdseventeen.ui.registerpage.RegisterPageFragment"
+        android:label="fragment_register_page"
+        tools:layout="@layout/fragment_register_page" >
+        <action
+            android:id="@+id/action_registerPageFragment_to_mainPageFragment"
+            app:destination="@id/mainPageFragment"
+            app:popUpTo="@id/registerPageFragment"
+            app:popUpToInclusive="true"/>
+    </fragment>
+    <fragment
+        android:id="@+id/homePageFragment"
+        android:name="com.exercise.tbchomeworkdseventeen.ui.homepage.HomePageFragment"
+        android:label="fragment_home_page"
+        tools:layout="@layout/fragment_home_page" >
+        <action
+            android:id="@+id/action_homePageFragment_to_mainPageFragment"
+            app:destination="@id/mainPageFragment"
+            app:popUpTo="@id/homePageFragment"
+            app:popUpToInclusive="true"/>
+    </fragment>
+</navigation>
